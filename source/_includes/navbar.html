@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
   <div class="container-fluid">
     <!-- <a class="navbar-brand" href="#">Needs Callouts</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
@@ -7,25 +7,27 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="freeCompanyInfoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Free Company Info</a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="freeCompanyInfoDropdown">
-            <!-- <li><a class="dropdown-item" href="#">About Us</a></li> -->
-            <!-- <li><a class="dropdown-item" href="#">Free Company Rules & Guidelines</a></li> -->
-            <!-- <li><a class="dropdown-item" href="#">Free Company Ranks</a></li> -->
-            <!-- <li><a class="dropdown-item" href="#">How to Join</a></li> -->
-            <li><a class="dropdown-item" href="https://na.finalfantasyxiv.com/lodestone/freecompany/9233645873504835379/">Lodestone Page</a></li>
-          </ul>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Gallery</a>
-        </li> -->
+        {% for item in site.data.navigation %}
+          {% if item.type == "link" %}
+            <li class="nav-item {% if page.url == item.link %} active {% endif %}">
+              <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+            </li>
+          {% elsif item.type == "menu" %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="{{ item.name | downcase | replace " ", ""}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.name }}</a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="{{ item.name | downcase | replace " ", ""}}">
+                {% for subitem in item.submenu %}
+                  <li class="{% if page.url == subitem.link %} active {% endif %}">
+                    <a class="dropdown-item" href="{{ subitem.link }}">{{ subitem.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endif %}
+          <li class="nav-item {% if page.url == item.link %} active {% endif %}">
+
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

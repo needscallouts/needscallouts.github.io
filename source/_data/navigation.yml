@@ -1,0 +1,32 @@
+- 
+  link: /
+  name: Home
+  type: link
+- 
+  name: "Free Company Info"
+  submenu: 
+    # - 
+    #   link: /about-us
+    #   name: "About us"
+    #   type: link
+    - 
+      link: /free-company-rules-guidelines
+      name: "Free Company Rules & Guidelines"
+      type: link
+    # - 
+    #   link: /how-to-join
+    #   name: "How To Join"
+    #   type: link
+    - 
+      link: "https://na.finalfantasyxiv.com/lodestone/freecompany/9233645873504835379/"
+      name: "Lodestone Page"
+      type: link
+  type: menu
+# - 
+#   link: /news
+#   name: News
+#   type: link
+# - 
+#   link: /gallery
+#   name: Gallery
+#   type: link
