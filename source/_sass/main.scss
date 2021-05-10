@@ -11,10 +11,73 @@
 
 $backgroundColor: #ffffff;
 $bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$bodyFont: -apple-system,BlinkMacSystemFont, "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$headerFont: 'BebasNeueRegular', sans-serif;
 
 body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
+}
+
+.page-header-container {
+  position: relative;
+  width: 100%;
+  background: center center;
+  min-height: 512px;
+  max-height: 512px;
+  height: 512px;
+  margin-bottom: 5rem;
+
+  .page-header {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: $headerFont;
+  }
+}
+
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+.divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+
+.quotes {
+  .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+  }
 }

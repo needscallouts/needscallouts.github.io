@@ -1,48 +1,26 @@
 ---
-layout: default
+layout: cover
 ---
-<header class="hero">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12 text-center text-white">
-                <h1 class="display-1">Needs Callouts &lt;WOOPS&gt;</h1>
-                <p class="lead">A Final Fantasy XIV Free Company</p>
-            </div>
-        </div>
-    </div>
-</header>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <!-- <div>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link active" aria-content="page" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Contact</a>
+            </nav>
+        </div> -->
+    </header>
 
-<section class="container col-xxl-8 px-4 pt-5">
-    <!-- <div class="container col-xxl-8 px-4"> -->
-        <div class="row flex-lg-row-reverse align-items-center g-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img class="d-block mx-lg-auto img-fluid" src="{{ "/assets/images/landing/collage.png" | relative_url }}" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display fw-bold 1h-1 mb-3">Who are we?</h1>
-                <p class="lead">
-                    Needs Callouts is a social Free Company within Final Fantasy XIV on the Adamantoise server.
-                    We offer a welcoming, mature, and respectful environment to all players of FFXIV. You will
-                    not find strict membership rules and requirements to stay within the Free Company here; members are
-                    encouraged to enjoy the entire spectrum of content within the game in the way that they enjoy most.                    
-                </p>
-            </div>
-        </div>
-    <!-- </div> -->
-</section>
+    <main class="mt-auto mb-auto">
+        <h1 class="display-2">Needs Callouts &lt;WOOPS&gt;</h1>
+        <p class="lead">A Final Fantasy XIV Free Company</p>
+        <p class="lead">
+            <a href="/about-us" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn More</a>            
+        </p>
+    </main>
 
-<section class="container col-xxl-8 px-4 pt-5">
-    <div class="row flex-lg align-items-center g-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-            <img class="d-block mx-lg-auto img-fluid" src="{{"/assets/images/landing/welcome.png" | relative_url }}" loading="lazy">
-        </div>
-        <div class="col-lg-6">
-            <h1 class="display fw-bold 1h1 mb-3">Why Join Us?</h1>
-            <p class="lead">
-                We offer weekly events such as mount farming and treasure map nights, always active Free Company buffs, 
-                grouped content running for leveling/glamor/achievements, and general socializing through the in-game 
-                Free Company chat and our Discord server.
-            </p>
-        </div>
-    </div>
-</section>
+    <footer class="mt-auto text-white">
+        <p>Designed with ❤️ by {{ site.author }}</p>
+    </footer>
+</div>

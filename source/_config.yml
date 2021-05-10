@@ -1,3 +1,20 @@
-url: "https://needscallouts.com"        # the base hostname & protocol for the site, e.g. http://example.com
-baseurl: ""                             # the subpath of the site, e.g. /blog
-title: "Needs Callouts FC"              # the name of your site, e.g. ACME Corp.
+# The default language/locale of the site
+locale: "en-US"
+
+# The base hostname and protocol of the site when published
+# e.g. https://example.com
+url: "https://needscallouts.com"
+
+# The base subpath of the site.
+baseurl: ""
+
+# The title of the site. This will be used as the default title of pages
+# when a page.title value is not provided.
+title: "Needs Callouts Free Company"
+
+# The description of the site. This will be used in meta tags if a 
+# page.description value is not provided.
+description: "The official website of the Needs Callouts Free Company in Final Fantasy XIV"
+
+# The default author of the website
+author: "Christopher Whitley"

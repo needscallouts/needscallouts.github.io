@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{% if page.description %}{{ page.description}}{% else %}{{ site.description}}{% endif %}">
+<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
+
+<!-- Open Graph Meta Tags-->
+<meta property="og:locale" content="{% if site.locale %}{{ site.locale }}{% else %}{{ "en_US" }}{% endif %}">
+<meta property="og:type" content="{% if page.type %}{{ page.type }}{% else %}{{ "website" }}{% endif %}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content="{{ site.url }}/assets/images/{{ page.image }}">
