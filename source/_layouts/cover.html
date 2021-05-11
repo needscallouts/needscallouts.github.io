@@ -5,15 +5,26 @@
     {% include meta.html %}
     {% include title.html %}
     {% include globalstylesheets.html %}
-    <link rel="stylesheet" href="{{ " /assets/css/cover.css" | relative_url }}">
+    <!-- <link rel="stylesheet" href="{{ " /assets/css/cover.css" | relative_url }}"> -->
 </head>
 
-<!-- <body class="d-flex h-100 text-center text-white bg-dark"> -->
-
-<body class="h-100">
+<body class="cover-body">
     {% include navbar.html %}
-    <div class="d-flex h-100 text-center text-white bg-dark bg-image bebas-font">
-        {{ content }}
+    <div class="cover-container">
+        <div class="cover-inner-container">
+            <div class="spacing-hack mb-auto"></div>
+
+            <main class="mt-auto mb-auto">
+                <h1 class="display-2">Needs Callouts &lt;WOOPS&gt;</h1>
+                <p class="lead">A Final Fantasy XIV Free Company</p>
+                <p class="lead">
+                    <a href="/about-us" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn More</a>
+                </p>
+            </main>
+            <footer class="mt-auto text-white">
+                <p>Designed with ❤️ by {{ site.author }}</p>
+            </footer>
+        </div>
     </div>
     {% include globalscripts.html %}
 </body>
